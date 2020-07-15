@@ -1,0 +1,13 @@
+[Unit]
+Description=Turn on fan when over the script specified temperature
+
+[Service]
+# If User and Group are not specified, then by default systemd ExecStart runs as root
+User=root
+Group=root
+Type=simple
+ExecStart=/usr/local/bin/fan-control.sh
+Restart=Always
+
+[Install]
+WantedBy=multi-user.target
