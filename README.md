@@ -6,6 +6,10 @@ Completly written in bash. No libraries and/or extra packages needed.
 It works by setting a pin high when the CPU temperature raises above a certain level, and setting it low when it is below that same level.
 That means that it works to drive directly the fan by connecting it to the pin, or you can also connect a transistor to the pin to use as a switch and drive the fan with 5V instead.
 
+Added a new version where there are two temperature thresholds, one for turning on the fan and one for turning it off (this threshold is a lower temperature then the top threshold). This change was made because with one single threshold it was constantly turning on and off the fan.
+
+The old version can still be found in the repository under the name ```fan-control-old.sh```.
+
 ## Configuration
 The temperature threshold, pin nunber and time between checks can be changed in the ```fan-control.sh``` script.
 
